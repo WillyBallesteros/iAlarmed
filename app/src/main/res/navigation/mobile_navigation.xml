@@ -14,7 +14,7 @@
     <fragment
         android:id="@+id/nav_gallery"
         android:name="com.miso.uxui.ialarmed.ui.gallery.GalleryFragment"
-        android:label="@string/menu_gallery"
+        android:label="@string/menu_take_pill"
         tools:layout="@layout/fragment_gallery" />
 
     <fragment
