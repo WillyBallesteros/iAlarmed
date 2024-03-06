@@ -11,7 +11,7 @@
     <string name="menu_take_pill">CONFIRMAR MEDICAMENTO</string>
     <string name="take_pill_message">Toma Fotográfica</string>
     <string name="take_pill">Imagen</string>
-    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_medicines">Medicamentos</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

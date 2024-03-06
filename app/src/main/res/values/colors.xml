@@ -11,4 +11,6 @@
     <color name="blue_menu">#1A2040</color>
     <color name="red">#FF0000</color>
     <color name="green">#00FF00</color>
+    <color name="colorAccent">#FFFFFFFF</color>
+    <color name="darkBlue">#1A2040</color>
 </resources>

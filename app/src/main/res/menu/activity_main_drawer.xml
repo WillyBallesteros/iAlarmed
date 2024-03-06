@@ -13,8 +13,8 @@
             android:icon="@drawable/ic_menu_take"
             android:title="@string/menu_take_pill" />
         <item
-            android:id="@+id/nav_slideshow"
+            android:id="@+id/nav_medicines"
             android:icon="@drawable/ic_menu_slideshow"
-            android:title="@string/menu_slideshow" />
+            android:title="@string/menu_medicines" />
     </group>
 </menu>

@@ -28,8 +28,8 @@
         tools:layout="@layout/fragment_take_confirm" />
 
     <fragment
-        android:id="@+id/nav_slideshow"
-        android:name="com.miso.uxui.ialarmed.ui.slideshow.SlideshowFragment"
-        android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />
+        android:id="@+id/nav_medicines"
+        android:name="com.miso.uxui.ialarmed.ui.medicines.MedicinesFragment"
+        android:label="@string/menu_medicines"
+        tools:layout="@layout/fragment_medicines" />
 </navigation>
