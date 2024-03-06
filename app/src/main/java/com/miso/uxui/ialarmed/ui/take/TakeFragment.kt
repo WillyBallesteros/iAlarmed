@@ -1,7 +1,6 @@
 package com.miso.uxui.ialarmed.ui.take
 
 import android.content.pm.PackageManager
-import android.net.Uri
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -18,6 +17,7 @@ import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import com.miso.uxui.ialarmed.R
 import com.miso.uxui.ialarmed.databinding.FragmentTakeBinding
 import java.io.File
@@ -28,13 +28,8 @@ import java.util.Locale
 class TakeFragment : Fragment() {
 
     private var _binding: FragmentTakeBinding? = null
-
-    // This property is only valid between onCreateView and
-    // onDestroyView.
     private val binding get() = _binding!!
-
     private var imageCapture:ImageCapture?=null
-
     private lateinit var outputDirectory:File
 
     override fun onCreateView(
@@ -42,26 +37,16 @@ class TakeFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val takeViewModel =
-            ViewModelProvider(this).get(TakeViewModel::class.java)
-
+        val takeViewModel = ViewModelProvider(this).get(TakeViewModel::class.java)
         _binding = FragmentTakeBinding.inflate(inflater, container, false)
         val root: View = binding.root
-
         outputDirectory = outputDirectory()
-
         if( allPermissionGranted() ){
-            // Toast.makeText(requireActivity(), "Permisos de camara", Toast.LENGTH_SHORT).show()
             startCamera()
         }else{
             ActivityCompat.requestPermissions(requireActivity(), Constants.REQUIRED_PERMISSIONS, Constants.REQUEST_CODE_PERMISSIONS)
         }
-
         binding.btnTakePhoto.setOnClickListener{ takePhoto() }
-
-
-
-
         return root
     }
 
@@ -91,11 +76,8 @@ class TakeFragment : Fragment() {
             outputOption, ContextCompat.getMainExecutor(requireContext()),
             object : ImageCapture.OnImageSavedCallback {
                 override fun onImageSaved(outputFileResults: OutputFileResults) {
-                    val savedUri = Uri.fromFile(photoFile)
-                    val msg = "ok"
-                    Toast.makeText(requireActivity(), "$msg $savedUri", Toast.LENGTH_SHORT).show()
+                    findNavController().navigate(R.id.action_nav_take_to_nav_take_confirm)
                 }
-
                 override fun onError(exception: ImageCaptureException) {
                     Log.d(Constants.TAG, "onError: ${exception.message} ", exception)
                 }
@@ -110,7 +92,6 @@ class TakeFragment : Fragment() {
             ) == PackageManager.PERMISSION_GRANTED
         }
 
-
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
@@ -119,10 +100,7 @@ class TakeFragment : Fragment() {
     private fun startCamera() {
         val cameraProviderFuture = ProcessCameraProvider.getInstance(requireContext())
         cameraProviderFuture.addListener({
-
             val cameraProvider: ProcessCameraProvider = cameraProviderFuture.get()
-
-
             val preview = Preview.Builder()
                 .build()
                 .also { mPreview ->
@@ -132,20 +110,15 @@ class TakeFragment : Fragment() {
                 }
             imageCapture = ImageCapture.Builder()
                 .build()
-
             val cameraSelector = CameraSelector.DEFAULT_BACK_CAMERA
-
             try{
-
                 cameraProvider.unbindAll()
                 cameraProvider.bindToLifecycle(
                     this, cameraSelector, preview, imageCapture
                 )
-
             }catch (e:Exception){
                 Log.d(Constants.TAG, "Inicio de camara fallo:",e)
             }
-
         }, ContextCompat.getMainExecutor(requireContext()))
     }
 
@@ -160,7 +133,6 @@ class TakeFragment : Fragment() {
                 startCamera()
             }else{
                 Toast.makeText(requireActivity(), "NOOOOO Permisos de camara", Toast.LENGTH_SHORT).show()
-
             }
         }
     }
