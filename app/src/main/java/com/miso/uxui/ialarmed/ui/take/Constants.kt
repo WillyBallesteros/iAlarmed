@@ -1,4 +1,4 @@
-package com.miso.uxui.ialarmed.ui.gallery
+package com.miso.uxui.ialarmed.ui.take
 
 import android.Manifest
 object Constants {
