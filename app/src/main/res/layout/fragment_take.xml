@@ -13,7 +13,9 @@
         android:layout_height="wrap_content"
         android:text="@string/take_pill_message"
         android:textColor="@color/white"
-        android:textSize="24sp"
+        android:textSize="32sp"
+        android:textAlignment="center"
+        android:fontFamily="@font/roboto_medium"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="MissingConstraints" />
@@ -21,8 +23,8 @@
     <Button
         android:id="@+id/btnTakePhoto"
         android:layout_marginBottom="32dp"
-        android:layout_height="100dp"
-        android:layout_width="100dp"
+        android:layout_height="80dp"
+        android:layout_width="80dp"
         android:theme="@style/AppTheme.MenuTextStyle"
         android:background="@drawable/photo_circle"
         app:layout_constraintBottom_toBottomOf="parent"

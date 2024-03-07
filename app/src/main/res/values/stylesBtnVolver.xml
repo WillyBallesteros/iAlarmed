@@ -1,0 +1,15 @@
+<resources>
+    <!-- Base application theme -->
+    <style name="AppButtonTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here -->
+        <item name="colorPrimary">@color/blue_menu</item>
+    </style>
+
+    <!-- Estilo para el texto del menú -->
+    <style name="AppButtonTheme.ButtonStyle">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <!-- Otros estilos personalizados pueden ir aquí -->
+
+</resources>
