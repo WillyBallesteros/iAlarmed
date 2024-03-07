@@ -12,6 +12,7 @@
     <string name="take_pill_message">Toma Fotográfica</string>
     <string name="take_pill">Imagen</string>
     <string name="menu_medicines">Medicamentos</string>
+    <string name="menu_medicine_detail">DETALLE MEDICAMENTO</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

@@ -3,6 +3,7 @@
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here -->
         <item name="colorPrimary">@color/white</item>
+        <item name="android:fontFamily">@font/roboto_medium</item>
     </style>
 
     <!-- Estilo para el texto del menú -->
