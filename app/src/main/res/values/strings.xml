@@ -8,11 +8,17 @@
     <string name="action_settings">Settings</string>
 
     <string name="menu_home">Home</string>
-    <string name="menu_take_pill">CONFIRMAR MEDICAMENTO</string>
+    <string name="menu_take_pill">Confirmar Medicamento</string>
     <string name="take_pill_message">Toma Fotográfica</string>
     <string name="take_pill">Imagen</string>
     <string name="menu_medicines">Medicamentos</string>
     <string name="menu_medicine_detail">DETALLE MEDICAMENTO</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="foto_confirmada_ncoincide_con_el_registro">Foto Confirmada \nCoincide con el registro</string>
+    <string name="btn_accept">Aceptar</string>
+    <string name="emptyString">" "</string>
+    <string name="medicine">LORATADINA</string>
+    <string name="medicine_registered">LA TOMA DE SU MEDICAMENTO HA SIDO REGISTRADA</string>
+    <string name="goBack">Volver</string>
 </resources>

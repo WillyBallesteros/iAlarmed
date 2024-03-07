@@ -6,10 +6,52 @@
     android:layout_height="match_parent"
     tools:context=".ui.take.TakeConfirmFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+    <androidx.cardview.widget.CardView
+        android:layout_width="286dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/blue_menu"
+            android:padding="16dp">
+
+            <!-- Texto -->
+            <TextView
+                android:id="@+id/menu_text"
+                android:layout_width="222dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_medium"
+                android:text="@string/foto_confirmada_ncoincide_con_el_registro"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="19sp" />
+            <TextView
+                android:id="@+id/menu_text2"
+                android:layout_width="222dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_medium"
+                android:text="@string/emptyString"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="19sp" />
+
+
+            <Button
+                android:id="@+id/menu_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:theme="@style/AppTheme.MenuTextStyle"
+                android:text="@string/btn_accept"
+                android:textColor="@color/blue_menu" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

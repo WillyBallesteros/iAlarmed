@@ -5,14 +5,17 @@
 
     <group android:checkableBehavior="single">
         <item
+            android:fontFamily="@font/roboto_medium"
             android:id="@+id/nav_home"
             android:icon="@drawable/ic_menu_camera"
             android:title="@string/menu_home" />
         <item
+            android:fontFamily="@font/roboto_medium"
             android:id="@+id/nav_take"
             android:icon="@drawable/ic_menu_take"
             android:title="@string/menu_take_pill" />
         <item
+            android:fontFamily="@font/roboto_medium"
             android:id="@+id/nav_medicines"
             android:icon="@drawable/ic_menu_slideshow"
             android:title="@string/menu_medicines" />
