@@ -30,15 +30,30 @@
             android:id="@+id/action_nav_take_confirm_to_takeSaveFragment"
             app:destination="@id/takeSaveFragment" />
     </fragment>
-
-    <fragment
-        android:id="@+id/nav_medicines"
-        android:name="com.miso.uxui.ialarmed.ui.medicines.MedicinesFragment"
-        android:label="@string/menu_medicines"
-        tools:layout="@layout/fragment_medicines" />
     <fragment
         android:id="@+id/takeSaveFragment"
         android:name="com.miso.uxui.ialarmed.ui.take.TakeSaveFragment"
         android:label="@string/menu_take_pill"
         tools:layout="@layout/fragment_take_save" />
+	    <fragment
+        android:id="@+id/nav_medicines"
+        android:name="com.miso.uxui.ialarmed.ui.medicines.MedicinesFragment"
+        android:label="@string/menu_medicines"
+        tools:layout="@layout/fragment_medicines" >
+        <action
+            android:id="@+id/action_nav_medicines_to_nav_medicine_detail"
+            app:destination="@id/nav_medicine_detail">
+
+        </action>
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_medicine_detail"
+        android:name="com.miso.uxui.ialarmed.ui.medicines.MedicineDetailFragment"
+        android:label="@string/menu_medicine_detail"
+        tools:layout="@layout/fragment_medicine_detail" >
+        <argument
+            android:name="medicineId"
+            app:argType="integer" />
+    </fragment>
 </navigation>
