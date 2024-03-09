@@ -21,4 +21,8 @@
     <string name="medicine">LORATADINA</string>
     <string name="medicine_registered">LA TOMA DE SU MEDICAMENTO HA SIDO REGISTRADA</string>
     <string name="goBack">Volver</string>
+    <string name="remember">RECORDATORIO\nTOMA\nMEDICAMENTO</string>
+    <string name="remember_confirm">¿DESEA TOMAR SU MEDICAMENTO AHORA?</string>
+    <string name="no">NO</string>
+    <string name="yes">SI</string>
 </resources>

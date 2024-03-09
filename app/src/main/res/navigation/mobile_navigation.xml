@@ -15,7 +15,7 @@
         android:id="@+id/nav_take"
         android:name="com.miso.uxui.ialarmed.ui.take.TakeFragment"
         android:label="@string/menu_take_pill"
-        tools:layout="@layout/fragment_take" >
+        tools:layout="@layout/fragment_take_camera" >
         <action
             android:id="@+id/action_nav_take_to_nav_take_confirm"
             app:destination="@id/nav_take_confirm" />
@@ -55,5 +55,14 @@
         <argument
             android:name="medicineId"
             app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/takeStartFragment"
+        android:name="com.miso.uxui.ialarmed.ui.take.TakeStartFragment"
+        android:label="fragment_take_start"
+        tools:layout="@layout/fragment_take_start" >
+        <action
+            android:id="@+id/action_takeStartFragment_to_nav_take"
+            app:destination="@id/nav_take" />
     </fragment>
 </navigation>

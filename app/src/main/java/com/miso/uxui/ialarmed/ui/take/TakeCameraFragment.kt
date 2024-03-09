@@ -19,7 +19,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.miso.uxui.ialarmed.R
-import com.miso.uxui.ialarmed.databinding.FragmentTakeBinding
+import com.miso.uxui.ialarmed.databinding.FragmentTakeCameraBinding
 import java.io.File
 import java.lang.Exception
 import java.text.SimpleDateFormat
@@ -27,7 +27,7 @@ import java.util.Locale
 
 class TakeFragment : Fragment() {
 
-    private var _binding: FragmentTakeBinding? = null
+    private var _binding: FragmentTakeCameraBinding? = null
     private val binding get() = _binding!!
     private var imageCapture:ImageCapture?=null
     private lateinit var outputDirectory:File
@@ -38,7 +38,7 @@ class TakeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         val takeViewModel = ViewModelProvider(this).get(TakeViewModel::class.java)
-        _binding = FragmentTakeBinding.inflate(inflater, container, false)
+        _binding = FragmentTakeCameraBinding.inflate(inflater, container, false)
         val root: View = binding.root
         outputDirectory = outputDirectory()
         if( allPermissionGranted() ){
