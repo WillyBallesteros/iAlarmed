@@ -1,5 +1,13 @@
 # iAlarmed : Aplicación Móvil de Alarma para toma de Medicamentos
 
+
+
+https://github.com/WillyBallesteros/iAlarmed/assets/6864141/1d8f806f-1a4b-4183-b737-6cf9283ceb44
+
+
+
+
+
 Esta aplicación móvil desarrollada para la plataforma Android proporciona una interfaz intuitiva para la gestión de medicamentos. 
 Incluye dos flujos principales de funcionalidad, cada uno accesible a través de un menú hamburguesa.
 
