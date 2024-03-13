@@ -59,7 +59,7 @@
     <fragment
         android:id="@+id/takeStartFragment"
         android:name="com.miso.uxui.ialarmed.ui.take.TakeStartFragment"
-        android:label="fragment_take_start"
+        android:label="@string/menu_medicine_detail"
         tools:layout="@layout/fragment_take_start" >
         <action
             android:id="@+id/action_takeStartFragment_to_nav_take"

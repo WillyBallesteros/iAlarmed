@@ -118,6 +118,7 @@ class TakeFragment : Fragment() {
                 )
             }catch (e:Exception){
                 Log.d(Constants.TAG, "Inicio de camara fallo:",e)
+                Toast.makeText(requireActivity(), "Inicio de camara fallo", Toast.LENGTH_SHORT).show()
             }
         }, ContextCompat.getMainExecutor(requireContext()))
     }
